@@ -1,0 +1,8 @@
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\bin\Debug\OCR_ROTransfer.exe
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\bin\Debug\OCR_ROTransfer.pdb
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.csprojResolveAssemblyReference.cache
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.Form1.resources
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.Properties.Resources.resources
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.csproj.GenerateResource.Cache
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.exe
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\Debug\OCR_ROTransfer.pdb
