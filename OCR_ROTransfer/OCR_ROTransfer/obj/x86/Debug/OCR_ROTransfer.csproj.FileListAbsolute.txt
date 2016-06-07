@@ -7,3 +7,4 @@ C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfe
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.exe
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.pdb
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\OCR_ROTransfer.exe.config
+C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.csprojResolveAssemblyReference.cache

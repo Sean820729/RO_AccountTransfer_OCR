@@ -35,6 +35,8 @@
             this.VeriImage_picturebox = new System.Windows.Forms.PictureBox();
             this.VeriCode_textbox = new System.Windows.Forms.TextBox();
             this.VeriCode_label = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VeriImage_picturebox)).BeginInit();
             this.SuspendLayout();
@@ -101,11 +103,33 @@
             this.VeriCode_label.TabIndex = 22;
             this.VeriCode_label.Text = "驗  證  碼:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(456, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "OCR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(456, 68);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Login";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 339);
+            this.ClientSize = new System.Drawing.Size(1016, 339);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.VeriCode_label);
             this.Controls.Add(this.VeriCode_textbox);
             this.Controls.Add(this.VeriImage_picturebox);
@@ -131,6 +155,8 @@
         private System.Windows.Forms.PictureBox VeriImage_picturebox;
         private System.Windows.Forms.TextBox VeriCode_textbox;
         private System.Windows.Forms.Label VeriCode_label;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

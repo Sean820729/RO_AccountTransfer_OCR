@@ -78,10 +78,16 @@ namespace OCR_ROTransfer
         private void VeriImage_picturebox_Click(object sender, EventArgs e)
         {
             GetValidateImage();
+
             string Veri = OCR();
             if (Veri != "")
             {
                 VeriCode_textbox.Text = Veri;
+                button2_Click(null, null);
+            }
+            else
+            {
+                VeriImage_picturebox_Click(null, null);
             }
         }
 
@@ -306,6 +312,76 @@ namespace OCR_ROTransfer
                     Veri = word.Text;
             }
             return Veri;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HttpWebRequest request = null;
+            string url = "https://gfb.gameflier.com/Billing/Login/login_check.asp";   //登录页面
+            request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+
+            request.Accept = "*/*;";
+            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.AllowAutoRedirect = true;
+            request.CookieContainer = myCookieContainer;
+            request.KeepAlive = true;
+
+            string postData = string.Format("redct=A12&gametype=ROOF&MW2_Argu01=&MW2_Argu02=&oid_game=&oid_method=&my_TRADE_NO=&my_GAME_TNO=" + 
+                    "&my_VerifyCode=&my_ReUrl=&my_banksn=&my_bankname=&my_bankprice=&my_projectid=&my_cardtype=&gshop_store=" + 
+                    "&web_id={0}&pwd={1}&pcode={2}&Submit3=+%E7%99%BB++%E5%85%A5+",
+                    "cMkzUE7id", "m4kquvnwiqp", VeriCode_textbox.Text
+                    );
+            byte[] postdatabyte = Encoding.UTF8.GetBytes(postData);
+            request.ContentLength = postdatabyte.Length;
+
+            using (Stream stream = request.GetRequestStream())
+            {
+                stream.Write(postdatabyte, 0, postdatabyte.Length);
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            string strWebData = string.Empty;
+            using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+            {
+                strWebData = reader.ReadToEnd();
+            }
+
+            //File.WriteAllText("WebData.txt", strWebData, Encoding.UTF8);
+
+            if (strWebData.Contains("Error"))
+            {
+                VeriImage_picturebox_Click(null, null);
+            }
+            else
+            {
+                MessageBox.Show(request.CookieContainer.Count.ToString());
+                // 轉移
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("https://gfb.gameflier.com/Billing/ONLINE_SERVICES/ROOF/action/20160406/index.aspx");
+                req.Method = "GET";
+                req.CookieContainer = request.CookieContainer;
+                using (WebResponse wr = req.GetResponse())
+                {
+                    //在這裡對接收到的頁面內容進行處理
+                    using (StreamReader myStreamReader = new StreamReader(wr.GetResponseStream()))
+                    {
+
+                        string data = myStreamReader.ReadToEnd();
+
+                        //Console.WriteLine("data:" + data);
+                        File.WriteAllText("WebData.txt", data, Encoding.UTF8);
+                    }
+                }
+
+                // 判斷轉移
+            }
         }
     }
 }
