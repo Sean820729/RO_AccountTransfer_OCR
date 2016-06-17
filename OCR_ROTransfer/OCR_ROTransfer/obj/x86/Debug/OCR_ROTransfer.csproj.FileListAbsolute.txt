@@ -8,3 +8,13 @@ C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfe
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.pdb
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\OCR_ROTransfer.exe.config
 C:\Users\LINYH\Desktop\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.csprojResolveAssemblyReference.cache
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\OCR_ROTransfer.exe.config
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.exe
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.pdb
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\OCR_ROTransfer.exe
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\OCR_ROTransfer.pdb
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\bin\x86\Debug\tessnet2_32.dll
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.csprojResolveAssemblyReference.cache
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.Form1.resources
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.Properties.Resources.resources
+D:\Github\C#\RO\RO_AccountTransfer_OCR\OCR_ROTransfer\OCR_ROTransfer\obj\x86\Debug\OCR_ROTransfer.csproj.GenerateResource.Cache

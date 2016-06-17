@@ -1,1 +1,134 @@
-﻿<script>alert('您尚未登入!');top.document.location.href='/billing/login/login.asp';</script>
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	RO帳號轉移/退費申請 - GF活動
+</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: transparent;
+}
+-->
+</style>
+<link href="../../../css/newstep.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2) ; i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+    //-->
+</script>
+</head>
+<body onload="MM_preloadImages('../../../../images/bum/bum_t02_b.gif','../../../../images/bum/bum_t01_b.gif','../../../../images/bum/bum_t03_b.gif')">
+    <form name="form1" method="post" action="index.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTUyMjk4OTg3OGRk2Y+V1UlxKN4xMUVAHoj/niePQk8=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="104AB732" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKskM+DAQKTwr+8CgL42N0RAvjYmegPdmCe0plAQDZxCqZVbexzGaMf9g8=" />
+        <table width="695" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                        <tr>
+                            <td align="center">
+                                <table width="650" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF">
+                                            <table width="630" border="0">
+                                                <tr>
+                                                    <td height="40" align="right" valign="top" background="images/title01.jpg">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" border="0" align="center" cellpadding="8" cellspacing="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <table id="PlayerInfoList" class="table2 font12b" cellspacing="2" cellpadding="5" border="0" bgcolor="#A2DCFF" width="100%">
+	<tr>
+		<td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="14%">遊戲帳號</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">帳號轉移</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">退費</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="14%">退費狀態</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">點數轉移<br />其他遊戲</td>
+	</tr><tr>
+		<td align="center" valign="middle" bgcolor="#EEFFEE" height="64">pfpvlbkjw0rod</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: return confirm(&quot;您確定要申請帳號轉移嗎？\n※確定後將無法選擇其他方案。&quot;);" id="Method01_pfpvlbkjw0rod" href="javascript:__doPostBack('Method01_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t01_a.gif" id="Img01_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img01_1','','../../../../images/bum/bum_t01_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method02_pfpvlbkjw0rod" href="javascript:__doPostBack('Method02_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t02_a.gif" id="Img02_1" alt="申請退費" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img02_1','','../../../../images/bum/bum_t02_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64">未選擇</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method03_pfpvlbkjw0rod" href="javascript:__doPostBack('Method03_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t03_a.gif" id="Img03_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img03_1','','../../../../images/bum/bum_t03_b.gif',1)" /></a></td>
+	</tr>
+</table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table width="100%" border="0" align="center" cellpadding="5" cellspacing="3" class="table3">
+                                                                        <tr>
+                                                                            <td height="25" align="left" bgcolor="#FFF4F4">
+                                                                                <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td width="5%">
+                                                                                            <img src="../../../images/newway/tip.gif" width="21" height="18" /></td>
+                                                                                        <td width="95%" class="tip">注意事項</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="font12b">
+                                                                            <td align="left" valign="middle">
+                                                                                <ol>
+                                                                                    <li>帳號轉移與退費只能擇一申請，申請後無法進行取消或變更。</li>
+                                                                                    <li>申請退費的帳號是無法進行轉移的，請玩家多加留意。</li>
+                                                                                    <li>帳號轉移後，遊戲內商城點數將於5/31 09:00現有伺服器關閉後，將同步轉移至Gravity的新伺服器繼續使用。</li>
+                                                                                    <li>申請退費將統一於5/31伺服器關閉後的剩餘點數進行結算，處理將需30天工作天（不包含假日）。</li>
+                                                                                    <li>若因遇不可抗力之因素，將有延長或縮短申請時間。</li>
+                                                                                    <li>若有任何問題請至<a href="http://serviceplus.gameflier.com/" target="_blank">【線上客服回覆系統】</a>回報。 </li>
+                                                                                </ol>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="60%" border="0" align="center" cellpadding="10" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="35" align="center" valign="middle">
+                                                                                <a href="../../service.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('back','','../../../../images/GF_card/bum_sehome_b.gif',0)"><img src="../../../../images/GF_card/bum_sehome_a.gif" alt="回服務首頁" name="back" width="103" height="30" border="0" id="back" /></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
