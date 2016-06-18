@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Collections;
+using System.Web;
 
 using tessnet2;
 
@@ -376,6 +377,31 @@ namespace OCR_ROTransfer
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            if (GetPostData())
+            {
+                PostData();
+            }
+
+            if (Nth < Account_listView.Items.Count)
+                timer1.Start();
+        }
+
+        private bool GetPostData()
+        {
+            bool IsGetPostData = false;
             myCookieContainer = new CookieContainer();
             myCookieContainer.SetCookies(new Uri("https://gfb.gameflier.com"), String.Format("gangangan={0}", Account_listView.Items[Nth].SubItems[1].Text));
             // 清空 HashTable
@@ -385,6 +411,7 @@ namespace OCR_ROTransfer
             req.Method = "GET";
             req.CookieContainer = myCookieContainer;
             req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+            req.UserAgent = "runscope/0.1";
             //req.Headers.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
             req.Host = "gfb.gameflier.com";
             //req.CookieContainer.SetCookies(new Uri("https://gfb.gameflier.com"), "gangangan=v4CTNrKmQrh");
@@ -399,42 +426,57 @@ namespace OCR_ROTransfer
 
                     //Console.WriteLine("data:" + data);
                     //File.WriteAllText("WebData.txt", data, Encoding.UTF8);
+                    if (data.Contains("申請時間："))
+                    {
+                        Account_listView.Items[Nth].SubItems[3].Text = "O";
+                        Nth++;
+                    }
+                    else
+                    {
+                        string[] str_splt = data.Split(new string[] { "<input type=\"hidden\" name=\"__EVENTVALIDATION\" id=\"__EVENTVALIDATION\" value=\"" }, StringSplitOptions.RemoveEmptyEntries);
+                        string __EVENTVALIDATION = str_splt[1].Split(new string[] { "\" />" }, StringSplitOptions.RemoveEmptyEntries)[0];
 
-                    string[] str_splt = data.Split(new string[] { "<input type=\"hidden\" name=\"__EVENTVALIDATION\" id=\"__EVENTVALIDATION\" value=\"" }, StringSplitOptions.RemoveEmptyEntries);
-                    string __EVENTVALIDATION = str_splt[1].Split(new string[] { "\" />" }, StringSplitOptions.RemoveEmptyEntries)[0];
+                        hashTable_Post.Add("__EVENTTARGET", String.Format("Method01_{0}rod", Account_listView.Items[Nth].SubItems[1].Text.ToLower()));
+                        hashTable_Post.Add("__EVENTARGUMENT", "");
+                        hashTable_Post.Add("__VIEWSTATE", "/wEPDwUKLTUyMjk4OTg3OGRk2Y+V1UlxKN4xMUVAHoj/niePQk8=".Replace("/", "%2F").Replace("+", "%2B").Replace("=", "%3D"));
+                        hashTable_Post.Add("__VIEWSTATEGENERATOR", "104AB732");
+                        hashTable_Post.Add("__EVENTVALIDATION", __EVENTVALIDATION.Replace("/", "%2F").Replace("+", "%2B").Replace("=", "%3D"));
 
-                    hashTable_Post.Add("__EVENTTARGET", String.Format("Method01_{0}rod", Account_listView.Items[Nth].SubItems[1].Text.ToLower()));
-                    hashTable_Post.Add("__EVENTARGUMENT", "");
-                    hashTable_Post.Add("__VIEWSTATE", "/wEPDwUKLTUyMjk4OTg3OGRk2Y+V1UlxKN4xMUVAHoj/niePQk8=");
-                    hashTable_Post.Add("__VIEWSTATEGENERATOR", "104AB732");
-                    hashTable_Post.Add("__EVENTVALIDATION", __EVENTVALIDATION);
+                        IsGetPostData = true;
+                    }
                 }
             }
 
-            
+            return IsGetPostData;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void PostData()
         {
             //myCookieContainer = new CookieContainer();
             //myCookieContainer.SetCookies(new Uri("https://gfb.gameflier.com"), String.Format("gangangan={0}", Account_listView.Items[Nth].SubItems[1].Text));
-            MessageBox.Show(myCookieContainer.GetCookieHeader(new Uri("https://gfb.gameflier.com")));
+            //MessageBox.Show(myCookieContainer.GetCookieHeader(new Uri("https://gfb.gameflier.com")));
 
             HttpWebRequest request = null;
             string url = "https://gfb.gameflier.com/Billing/ONLINE_SERVICES/ROOF/action/20160406/index.aspx";   //登录页面
             request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
             request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.AutomaticDecompression = DecompressionMethods.GZip;
+            request.UserAgent = "runscope/0.1";
+            //request.Headers.Set("Accept-Encoding", "gzip, deflate");
             request.Host = "gfb.gameflier.com";
             request.CookieContainer = myCookieContainer;
 
             string postData = string.Format("__EVENTTARGET={0}&__EVENTARGUMENT={1}&__VIEWSTATE={2}&__VIEWSTATEGENERATOR={3}&__EVENTVALIDATION={4}",
-                hashTable_Post["__EVENTTARGET"].ToString(), hashTable_Post["__EVENTARGUMENT"].ToString(), hashTable_Post["__VIEWSTATE"].ToString(), 
+                hashTable_Post["__EVENTTARGET"].ToString(), hashTable_Post["__EVENTARGUMENT"].ToString(), hashTable_Post["__VIEWSTATE"].ToString(),
                 hashTable_Post["__VIEWSTATEGENERATOR"].ToString(), hashTable_Post["__EVENTVALIDATION"].ToString()
                     );
-            
+
             byte[] postdatabyte = Encoding.UTF8.GetBytes(postData);
-            MessageBox.Show(postData + "\r\n" + postdatabyte.ToString());
+            //MessageBox.Show(postdatabyte.Length.ToString());
+            //MessageBox.Show(postData + "\r\n" + postdatabyte.ToString());
+            File.WriteAllText("postData.txt", postData);
             request.ContentLength = postdatabyte.Length;
 
             using (Stream stream = request.GetRequestStream())
@@ -452,11 +494,16 @@ namespace OCR_ROTransfer
 
             File.WriteAllText("WebData.txt", strWebData, Encoding.UTF8);
 
-            if (strWebData.Contains("申請時間："))
+            if (strWebData.Contains("已經成功申請帳號轉移"))
             {
                 Account_listView.Items[Nth].SubItems[3].Text = "O";
                 Nth++;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

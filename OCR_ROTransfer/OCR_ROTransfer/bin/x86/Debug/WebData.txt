@@ -52,7 +52,7 @@ body {
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTUyMjk4OTg3OGRk2Y+V1UlxKN4xMUVAHoj/niePQk8=" />
 
 <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="104AB732" />
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKskM+DAQKTwr+8CgL42N0RAvjYmegPdmCe0plAQDZxCqZVbexzGaMf9g8=" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKskM+DAQKmlfq+CALDiO7UBwLO0vHnByh1nRlawruDb6E6miYSAA0+uyO+" />
         <table width="695" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
                 <td align="center">
@@ -75,7 +75,7 @@ body {
 	<tr>
 		<td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="14%">遊戲帳號</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">帳號轉移</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">退費</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="14%">退費狀態</td><td class="color4" align="center" valign="middle" bgcolor="#DDF3FF" height="30" width="24%">點數轉移<br />其他遊戲</td>
 	</tr><tr>
-		<td align="center" valign="middle" bgcolor="#EEFFEE" height="64">pfpvlbkjw0rod</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: return confirm(&quot;您確定要申請帳號轉移嗎？\n※確定後將無法選擇其他方案。&quot;);" id="Method01_pfpvlbkjw0rod" href="javascript:__doPostBack('Method01_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t01_a.gif" id="Img01_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img01_1','','../../../../images/bum/bum_t01_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method02_pfpvlbkjw0rod" href="javascript:__doPostBack('Method02_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t02_a.gif" id="Img02_1" alt="申請退費" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img02_1','','../../../../images/bum/bum_t02_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64">未選擇</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method03_pfpvlbkjw0rod" href="javascript:__doPostBack('Method03_pfpvlbkjw0rod','')"><img src="../../../../images/bum/bum_t03_a.gif" id="Img03_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img03_1','','../../../../images/bum/bum_t03_b.gif',1)" /></a></td>
+		<td align="center" valign="middle" bgcolor="#EEFFEE" height="64">aoegufrvqyokrod</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: return confirm(&quot;您確定要申請帳號轉移嗎？\n※確定後將無法選擇其他方案。&quot;);" id="Method01_aoegufrvqyokrod" href="javascript:__doPostBack('Method01_aoegufrvqyokrod','')"><img src="../../../../images/bum/bum_t01_a.gif" id="Img01_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img01_1','','../../../../images/bum/bum_t01_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method02_aoegufrvqyokrod" href="javascript:__doPostBack('Method02_aoegufrvqyokrod','')"><img src="../../../../images/bum/bum_t02_a.gif" id="Img02_1" alt="申請退費" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img02_1','','../../../../images/bum/bum_t02_b.gif',1)" /></a></td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64">未選擇</td><td align="center" valign="middle" bgcolor="#FFFFFF" height="64"><a onclick="javascript: void(0); alert(&quot;申請時間已截止。&quot;);" id="Method03_aoegufrvqyokrod" href="javascript:__doPostBack('Method03_aoegufrvqyokrod','')"><img src="../../../../images/bum/bum_t03_a.gif" id="Img03_1" alt="申請轉移" width="120" height="30" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Img03_1','','../../../../images/bum/bum_t03_b.gif',1)" /></a></td>
 	</tr>
 </table>
                                                                 </td>
@@ -129,6 +129,12 @@ body {
                 </td>
             </tr>
         </table>
-    </form>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+alert("帳號aoegufrvqyokrod已經成功申請帳號轉移，請玩家於6/1~7/20至GNJOY平台註冊會員並進行綁定後才能進行遊戲。"); document.location.href="index.aspx";//]]>
+</script>
+</form>
 </body>
 </html>
